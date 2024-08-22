@@ -86,6 +86,7 @@ You can use this link to help you write better looking Markdown files. Now that 
 
 ## Useful Links
 [MIT Missing Semester for CS students](https://missing.csail.mit.edu/)
+
 [Git/Github hands on demo](https://docs.google.com/presentation/d/1_iuZPqEGW1sJgOoJnj5CYeFAvgiRIKOIE1FzqvZ7t7Q/edit?usp=sharing)
 
 [ssh keygen by Microsoft](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement)
@@ -96,6 +97,6 @@ You can use this link to help you write better looking Markdown files. Now that 
 
 VS Code Plugins Recommendation
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
 - [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
 - [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
