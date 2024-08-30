@@ -1,44 +1,109 @@
-# GEOG-392/676 GIS Programming: Lab 02 
->**Topic:** Loops & If/Else in Python
+# GEOG-392/676 GIS Programming: Lab 02
+
+>**Topic:** Python Loops & Conditionals
 >
 >**100 pt**
 >
 
-# Due Dates and Submission Instructions
+## Due Dates and Submission Instructions
+
 > **where**: canvas link
-> 
+>
 > **when**: before next lab
 >
-> **what**: 
-> 1. Screenshots of your answers.
-> 2. (Optional) Link to your Github repo that contains your work.
+> **what**: a PDF including all your code and results
 
-# **Outcomes:** 
-1. Detail Python variables and functions.
-2. Learn what is `list` and how to perform some simple calculations on list items.
+## **Task:**
 
+1. Learn how to use Python loops to automate tasks.
+2. Learn how to use Python conditionals to control the flow of your program.
+3. Debug Using VSCode.
 
-# **Task:** 
-1. Answer all subsections using whichever loop format you prefer.
-2. (Optional) `Commit` & `Push` your work to your own github repo.
+### **Loops**
 
-## Part 1 (30pt)
-**Q:** Take the following `list` and multiply all items within it. And print the result.
+#### **For Loop**
+
 ```python
-list1 = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+for i in range(5):
+    print(i)
 ```
 
-### Part 2 (30pt)
-**Q:** Take the following `list` and sum all items within it. And print the result.
+#### **While Loop**
+
 ```python
-list2 = [-1, 23, 483, 8573, -13847, -381569, 1652337, 718522177]
+i = 0
+while i < 5:
+    print(i)
+    i += 1
 ```
 
-### Part 3 (40pt)
-**Q:** Take the following `list` and get the summation of items which are even. (Hint: Use `modulo` operation `%` to tell if an item is odd or even.)
-```python
-list3 = [146, 875, 911, 83, 81, 439, 44, 5, 46, 76, 61, 68, 1, 14, 38, 26, 21] 
-``` 
+#### **Nested Loop**
 
-# Additional Resources
-[https://developers.google.com/edu/python/lists](https://developers.google.com/edu/python/lists)
+```python
+for i in range(3):
+    for j in range(3):
+        print(i, j)
+```
+
+#### **Loop Control Statements**
+
+```python
+for i in range(5):
+    if i == 3:
+        break
+    print(i)
+```
+
+### **Conditionals**
+
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+elif x == 5:
+    print("x is 5")
+else:
+    print("x is less than 5")
+```
+
+### **Debugging Using VSCode**
+
+#### **Select Python Interpreter**
+
+![VSCode Debugging](../Images/lab02/VSCode_Debugger-0.png)
+
+#### **Init Python Debugger**
+
+![VSCode Debugging](../Images/lab02/VSCode_Debugger-1.png)
+
+#### **Debugging Interface**
+
+![VSCode Debugging](../Images/lab02/VSCode_Debugger-2.png)
+
+## **Assignment Questions:**
+
+1. Take the following list and multiply all list items together. (30pts)
+
+    ```python
+    lst1 = [1,2,4,8,16,32,64,128,256,512,1024]
+    ```
+
+2. Take the following list and add all list items together. (30pts)
+
+    ```python
+    lst2 = [-1, 23, 483, 8573, -1384, -381569, 1652337, 718522177]
+    ```
+
+3. Take the following list and only add the items are even. **Hint: Use the [modulo](https://en.wikipedia.org/wiki/Modulo_operation) operator** (40pts)
+
+    ```python
+    lst3 = [146, 875, 911, 83, 81, 439, 44, 5, 46, 76, 61, 68, 1, 14, 38, 26, 21]
+    ```
+
+## **Useful Links:**
+
+- [Modulo operation in Python](https://www.w3schools.com/python/python_operators.asp)
+- [Python Operators](https://docs.python.org/3/reference/expressions.html#operator-precedence)
+- [Python Debugging](https://realpython.com/python-debugging-with-pdb/)
+- [VSCode Debugging](https://code.visualstudio.com/docs/python/debugging)
+- [Python Playground](https://www.online-python.com/)
