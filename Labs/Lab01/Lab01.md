@@ -30,49 +30,49 @@
 
 ### **Create Github Account**
 
-![GitHub Homepage](../Images/lab01/lab01-githubHomepage.png)
+![GitHub Homepage](../../Images/lab01/lab01-githubHomepage.png)
 
 ### **Create a `Private Repo` for this course**
 
-![GitHub Repo Creation Step 1](../Images/lab01/lab01-createrepo-1.png)
-![GitHub Repo Creation Step 2](../Images/lab01/lab01-createrepo-2.png)
-![GitHub Repo Creation Step 3](../Images/lab01/lab01-createrepo-3.png)
+![GitHub Repo Creation Step 1](../../Images/lab01/lab01-createrepo-1.png)
+![GitHub Repo Creation Step 2](../../Images/lab01/lab01-createrepo-2.png)
+![GitHub Repo Creation Step 3](../../Images/lab01/lab01-createrepo-3.png)
 
 ### **Tools Download & Install**
 
 #### Git
 
 [Git Download](https://git-scm.com/downloads)
-![Git Download](../Images/lab01/lab01-git-download.png)
+![Git Download](../../Images/lab01/lab01-git-download.png)
 
 #### VSCode
 
 [VSCode Download](https://code.visualstudio.com/download)
-![VS Code Download](../Images/lab01/lab01-vscode-download.png)
+![VS Code Download](../../Images/lab01/lab01-vscode-download.png)
 
 #### Python
 
 [Python Download](https://www.python.org/downloads/release/python-31011/). In the labs of this course, we recommend Python version 3.10.11 as major version, because its support for most packages' new features with stable maintainance at the same time.
-![Python Download](../Images/lab01/lab01-python-download.png)
+![Python Download](../../Images/lab01/lab01-python-download.png)
 
 ## **Repo Setup**
 
 ### SSH Keygen
 
-![SSH Keygen](../Images/lab01/lab01-sshkeygen.png)
+![SSH Keygen](../../Images/lab01/lab01-sshkeygen.png)
 
 Locate your `public key` file and copy everything.
 Paste it in the Github Setting. So that ssh clone can be used.
 
-![Add SSH Key](../Images/lab01/lab01-addsshkey.png)
+![Add SSH Key](../../Images/lab01/lab01-addsshkey.png)
 
 ### Git clone commands
 
-![Git Clone](../Images/lab01/lab01-git-clone-1.png)
+![Git Clone](../../Images/lab01/lab01-git-clone-1.png)
 
 > git clone `<your-repo-url>`
 
-![Git Clone](../Images/lab01/lab01-git-clone-2.png)
+![Git Clone](../../Images/lab01/lab01-git-clone-2.png)
 
 ### Add folders
 
@@ -87,7 +87,7 @@ You can use this link to help you write better looking Markdown files. Now that 
 
 ## Results
 
-![Result](../Images/lab01/lab01-Result-1.png)
+![Result](../../Images/lab01/lab01-Result-1.png)
 
 ## Optional
 

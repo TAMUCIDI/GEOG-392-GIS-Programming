@@ -70,15 +70,15 @@ else:
 
 #### **Select Python Interpreter**
 
-![VSCode Debugging](../Images/lab02/VSCode_Debugger-0.png)
+![VSCode Debugging](../../Images/lab02/VSCode_Debugger-0.png)
 
 #### **Init Python Debugger**
 
-![VSCode Debugging](../Images/lab02/VSCode_Debugger-1.png)
+![VSCode Debugging](../../Images/lab02/VSCode_Debugger-1.png)
 
 #### **Debugging Interface**
 
-![VSCode Debugging](../Images/lab02/VSCode_Debugger-2.png)
+![VSCode Debugging](../../Images/lab02/VSCode_Debugger-2.png)
 
 ## **Assignment Questions:**
 
@@ -99,6 +99,13 @@ else:
     ```python
     lst3 = [146, 875, 911, 83, 81, 439, 44, 5, 46, 76, 61, 68, 1, 14, 38, 26, 21]
     ```
+
+## **Submission:**
+
+- Copy the `lab2_template.py` file to `lab2.py` in your local repository.
+- Add your codes to fill the blanks in the `lab2.py` file.
+- Add, commit, and push your changes to your remote repository.
+- Submit your assignment on Canvas.
 
 ## **Useful Links:**
 
