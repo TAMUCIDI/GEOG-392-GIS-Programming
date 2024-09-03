@@ -19,8 +19,9 @@
 
 |Labs|
 |:--:|
-|[Lab 01](Labs/Lab01.md)|
-|[Lab 02](Labs/Lab02.md)|
+|[Lab 01](Labs/Lab01/Lab01.md)|
+|[Lab 02](Labs/Lab02/Lab02.md)|
+|[Lab 03](Labs/Lab03/Lab03.md)|
 
 ## Catalog Description
 
