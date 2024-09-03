@@ -109,13 +109,13 @@ Now you have finished the `CensusTract` class, you can use it to calculate the p
 - Locate column of a `GeoDataFrame` can be accessed using
 
     ```python
-    GeoDataFrame[<column_name>]
+    <GeoDataFrame>[<column_name>]
     ```
 
 - You can create a new column to the `GeoDataFrame` using
 
     ```python
-    GeoDataFrame[<new_column_name>] = <new_column_values>
+    <GeoDataFrame>[<new_column_name>] = <new_column_values>
     ```
 
 ## Submission
@@ -128,7 +128,8 @@ Then `git commit` your code and `push` to your remote repository.
 - 30 points for the `CensusTract` class definition.
 - 30 points for the population density calculation.
 - 20 points for the new column addition.
-- 20 points for the code quality and docstring.
+- 10 points for the code quality and docstring.
+- 10 points for Github repository.
 
 ## Useful Links
 
