@@ -1,8 +1,8 @@
 # GEOG 392/676: GIS PROGRAMMING
 >
->**Instructor:** Zhe Zhang, zhezhang@tamu.edu | **Online Office Hours:** F 1:30 pm-2:30 pm  or by appt. |  https://tamu.zoom.us/j/7322949427 
+>**Instructor:** Zhe Zhang, [zhezhang@tamu.edu](mailto:zhezhang@tamu.edu) | **Online Office Hours:** F 1:30 pm-2:30 pm  or by appt. |  [https://tamu.zoom.us/j/7322949427](https://tamu.zoom.us/j/7322949427)
 >
->**TA:** Zhenlei Song, songzl@tamu.edu | **Office Hours:** Friday 2pm - 5pm or by appt. | **Office:** CSA 301F
+>**TA:** Zhenlei Song, [songzl@tamu.edu](mailto:songzl@tamu.edu) | **Office Hours:** Friday 2pm - 5pm or by appt. | **Office:** CSA 301F
 >
 >**Lecture:** MWF 10:20 am -11:10 am ; OMB 112
 >
@@ -22,6 +22,7 @@
 |[Lab 01](Labs/Lab01/Lab01.md)|
 |[Lab 02](Labs/Lab02/Lab02.md)|
 |[Lab 03](Labs/Lab03/Lab03.md)|
+|[Lab 04](Labs/Lab04/Lab04.md)|
 
 ## Catalog Description
 
