@@ -202,7 +202,7 @@ About the screenshot of terminal, refer to the steps below.
 2. Take a screenshot of the terminal window to show your codes can run without error.
    ![screenshot-2](./images/screenshot_2.png)
 
-## Useful Links:
+## Useful Links
 
 - [ArcPy Documentation](https://pro.arcgis.com/en/pro-app/latest/arcpy/main/arcgis-pro-arcpy-reference.htm)
 - [Python in ArcGIS Pro](https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/installing-python-for-arcgis-pro.htm)

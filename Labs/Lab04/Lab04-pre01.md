@@ -12,7 +12,7 @@ Hopefully you already have your arcpy setup, if not please refer back to this [l
 
 ## Using arcpy
 
-In order to use ESRI's sweet array of GIS tools and operations within Python, all we have to do is import the functionality from the **arcpy** module. To do this we use a simple import statement like what is shown below. 
+In order to use ESRI's sweet array of GIS tools and operations within Python, all we have to do is import the functionality from the **arcpy** module. To do this we use a simple import statement like what is shown below.
 >
 ```python
 import arcpy
@@ -45,7 +45,7 @@ We simply use the arcpy module and reference the environment variable's **worksp
 
 ### Setting scratch workspace
 
-ESRI defines our script's scratch workspace as the location tool outputs are placed if the default output name is used. The scratch workspace is intended for output data you do not wish to maintain. In ArcGIS Pro, if you do not set the scratch workspace, it will default to the file geodatabase that is the default one for the map you are currently working on. You may or may not want this, luckily we can set this.  We can easily change our scratch workspace as it too is just a mutable attribute of our **env** object inside of **arcpy**. 
+ESRI defines our script's scratch workspace as the location tool outputs are placed if the default output name is used. The scratch workspace is intended for output data you do not wish to maintain. In ArcGIS Pro, if you do not set the scratch workspace, it will default to the file geodatabase that is the default one for the map you are currently working on. You may or may not want this, luckily we can set this.  We can easily change our scratch workspace as it too is just a mutable attribute of our **env** object inside of **arcpy**.
 >
 ```python
 arcpy.env.scratchWorkspace = "C:/tmp/ArcGISPython/scratch"
@@ -63,7 +63,6 @@ arcpy.CreateFileGDB_management(folder_path, "Test.gdb")
 >
 ![Geodatabase](./images/blank_gdb.png)
 >
-
 
 ## Additional resources
 
