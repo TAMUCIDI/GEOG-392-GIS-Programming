@@ -77,13 +77,13 @@ Buffer_Radius =
 ### <<<<<< End of your code here
 ```
 
-### **Step 2. Determine whether the selected building.**
+### **Step 2. Determine whether the selected building exists.**
 
 You need to add codes to determine if the selected building exists.
 
 - Use a search cursor ([`arcpy.da.SearchCursor`](https://pro.arcgis.com/en/pro-app/latest/arcpy/data-access/searchcursor-class.htm))
 - Use a loop to match `rows` in a cursor.
-- Within each loop, determine if the seartch cursor found the value the user entered. If so, proceed. If not, then exit with error message.
+- Within each loop, determine if the search cursor found the value the user entered. If so, proceed. If not, then exit with error message.
 
 ```python
 """
@@ -107,7 +107,7 @@ for row in cursor:
 if shouldProceed == True:
     ###
     # Next Step
-    # insert this section in the next step
+    # insert next step codes here.
     ###
     ###
     print("success")
@@ -119,7 +119,7 @@ else:
 
 ### **Step 3. Buffer & Clip**
 
-When the cursor find the garage name, select the `garage_feature` and then buffer on this sub-feature. Then clip the `structures` on the selected garage buffer.
+When the cursor find the garage name, select the garage with the name entered and then buffer on this sub-feature class. Then clip the `structures` on the selected garage buffer.
 
 APIs:
 
@@ -198,7 +198,7 @@ In the `Tool` class, 3 functions are required:
 
 - `__init__()`
 - `getParameterInfo()`
-- `excute()`
+- `execute()`
 
 Read [create a toolbox](./Lab05-pre02.md) for details.
 
@@ -232,7 +232,7 @@ def getParameterInfo(self):
     return params
 ```
 
-### `excute` funtion
+### `execute` funtion
 
 - Accept values from parameters in the `getParameter()` func.
 - You can re-use codes from `lab5_tool_template.py` to do the `buffer` and `clip` analysis.
