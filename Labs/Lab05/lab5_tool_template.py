@@ -61,8 +61,9 @@ cursor = arcpy.da.SearchCursor(***)
 shouldProceed = False
 
 for row in cursor:
-    if row.getValue("BldgName") == Selected_Garage_Name:
+    if Selected_Garage_Name in row:
         shouldProceed = True
+        break
 
 if shouldProceed == True:
     #select garage as feature layer

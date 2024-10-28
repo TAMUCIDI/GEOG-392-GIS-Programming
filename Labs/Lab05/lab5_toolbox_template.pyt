@@ -110,8 +110,8 @@ class Lab5_Tool(object):
 
             #clip
             arcpy.analysis.Clip(***)
-            print("success")
+            arcpy.AddMessage("Success")
         else:
-            print("error")
+            arcpy.AddError("Seems we couldn't find the building name you entered")
 
         return

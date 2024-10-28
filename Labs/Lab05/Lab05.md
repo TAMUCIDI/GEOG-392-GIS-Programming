@@ -265,8 +265,9 @@ def execute(self, parameters, messages):
     shouldProceed = False
 
     for row in cursor:
-        if row.getValue("BldgName") == Selected_Garage_Name:
+        if Selected_Garage_Name in row:
             shouldProceed = True
+            break
 
     if shouldProceed == True:
         #select garage as feature layer
@@ -290,9 +291,16 @@ When you finished, you should be able to see the toolbox in `ArcGIS Pro` like th
 
 If you look in deep in the tutorial for the tool, there is logic that determines if the building is there or not. After you run the toolbox, click the "view details" button. You should see the following:
 
-![toolbox result 1](./images/toolbox-result-1.png)
 ![toolbox result succ](./images/toolbox-result-succ.png)
 ![toolbox result error](./images/toolbox-result-err.png)
+
+## **Results**
+
+In both parts, after running your `Console Tool` or `Toolbox`, the output feature layer should locate in the `GDB` under the `workspace` folder. Please load that `GDB` you created in your codes and view it in ArcGIS Pro. You should see the result similar to the following.
+
+![results](./images/tool_result_arcgispro.jpg)
+
+**DON'T forget to include a screenshot of this step in your submission!**
 
 ## **Submission**
 
