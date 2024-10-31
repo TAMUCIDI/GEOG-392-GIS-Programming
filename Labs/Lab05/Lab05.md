@@ -236,7 +236,7 @@ def getParameterInfo(self):
 
 - Accept values from parameters in the `getParameter()` func.
 - You can re-use codes from `lab5_tool_template.py` to do the `buffer` and `clip` analysis.
-- replace the success and error messages from `print()` to `arcpy.AddMessage()`. Docs can be found at [doc](https://pro.arcgis.com/en/pro-app/latest/arcpy/functions/addmessage.htm).
+- replace the success and error messages from `print()` to [`arcpy.AddMessage()`](https://pro.arcgis.com/en/pro-app/latest/arcpy/functions/addmessage.htm) and [`arcpy.AddError()`](https://pro.arcgis.com/en/pro-app/latest/arcpy/functions/adderror.htm).
 
 ```python
 def execute(self, parameters, messages):
@@ -282,7 +282,7 @@ def execute(self, parameters, messages):
         arcpy.analysis.Clip(***)
         arcpy.AddMessage("success")
     else:
-        arcpy.AddMessage("error")
+        arcpy.AddError("***")
 ```
 
 When you finished, you should be able to see the toolbox in `ArcGIS Pro` like this:

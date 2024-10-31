@@ -23,12 +23,12 @@ Buffer_Radius = "150 meter"
 """
 ### >>>>>> Add your code here
 print("Please input the following parameters:\n")
-GDB_Folder = 
+GDB_Folder = input("GDB Folder: ")
 GDB_Name = 
 Garage_CSV_File = 
 Garage_Layer_Name = 
 Campus_GDB = 
-Selected_Garage_Name = 
+Selected_Garage_Name = "CSA"
 Buffer_Radius = 
 ### <<<<<< End of your code here
 
@@ -55,7 +55,7 @@ Use `arcpy.analysis.Buffer()` and `arcpy.analysis.Clip()`.
 ### >>>>>> Add your code here
 #search surcor
 structures = Campus_GDB + "/Structures"
-where_clause = "BldgName = '%s'" % Selected_Garage_Name
+where_clause = "LotName = '%s'" % Selected_Garage_Name
 cursor = arcpy.da.SearchCursor(***)
 
 shouldProceed = False
