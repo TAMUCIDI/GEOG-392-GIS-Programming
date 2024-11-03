@@ -39,7 +39,7 @@ The most basic of renderers, the `SimpleRenderer` is used to draw all features o
 
 `UniqueValueRenderer` is used to distinguish features in a feature layer based off of some classification, usually a **`data field`**. With this renderer, we are given programmatic control over the type of field used in the classification of features as well as the color ramp used when drawing said features.
 
-### 1.3 GraduateColorsRenderer
+### 1.3 GraduatedColorsRenderer
 
 `GraduatedColorsRenderer` is used to render features in a feature layer based off of a specific field in the feature class. We can use this particular renderer for creating `choropleth` maps programmatically; useful if you need to quickly produce such maps. This renderer gives us control over the style of choropleth produced; allowing the user to determine how many bins are present as well as the color ramp used.
 
@@ -109,9 +109,9 @@ for layer in mapObj.listLayers():
         # Make sure the "Structures" layer has a renderer
         if hasattr(symbology, 'renderer') && layer.name=="Structures":
             # Change the renderer to 'UniqueValueRenderer'
-            symbology.updateRenderer('UniqueValueRenderer')
+            symbology.updateRenderer('***')
             # Use the 'Type' column as the unique value column
-            symbology.renderer.fields = ["Type"]
+            symbology.renderer.fields = ["***"]
             # IMPORTANT!!! update the layer's symbology as the updated one 
             layer.symbology = symbology
         else:
@@ -149,13 +149,13 @@ for layer in mapObj.listLayers():
         # Make sure the "Structures" layer has a renderer
         if hasattr(symbology, 'renderer') && layer.name=="Trees":
             # Change the renderer to 'UniqueValueRenderer'
-            symbology.updateRenderer('GraduatedColorsRenderer')
+            symbology.updateRenderer('***')
             # Tell arcpy which field we want to base our choropleth off of
-            symbology.renderer.classificationField = "Shape_Area"
+            symbology.renderer.classificationField = "***"
             # Set how many classes we'll have 
-            symbology.renderer.breakCount = 5
+            symbology.renderer.breakCount = ?
             # Set the color ramp
-            symbology.renderer.colorRamp = project.listColorRamps('Oranges (5 Classes)')[0]
+            symbology.renderer.colorRamp = project.listColorRamps('***')[0]
             # Set the layer's actual symbology equal to the copy's
             layer.symbology = symbology # Very important step
         else:
