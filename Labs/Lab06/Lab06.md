@@ -129,7 +129,7 @@ You should see your map as something like this:
 Similar to the previous section, we will use the `GraduatedColorsRender` to create a choropleth map on the `Trees` feature layer from the `Campus.gdb` based off the `Shape_Area` date field. Add the layer to the map and save to the usual location. Create a new, plain Python script and import arcpy. Create a variable that references the newly created project file.
 
 Like the previous section, we need to fetch the feature layer, the symbology, and the renderer. When changing the renderer, we will pass the value of `GraduatedColorsRenderer` in the `updateRenderer()` method. After that, we set the `symbology.renderer.classificationField` as the data field which we want to determine the classification. In our case, this value should be `Shape_Area`. 
-
+And here is an example of the colorramp: `'Oranges (5 Classes)'`
 For the detailed config of the `GraduatedColorsRender`, we set 5 bins for the breakout of the classification. For the color map setting, we want them to be 5 classes in oranges spectrum. The codes should look like below:
 
 ```python
@@ -153,7 +153,7 @@ for layer in mapObj.listLayers():
             # Tell arcpy which field we want to base our choropleth off of
             symbology.renderer.classificationField = "***"
             # Set how many classes we'll have 
-            symbology.renderer.breakCount = ?
+            symbology.renderer.breakCount = ***
             # Set the color ramp
             symbology.renderer.colorRamp = project.listColorRamps('***')[0]
             # Set the layer's actual symbology equal to the copy's
@@ -273,7 +273,7 @@ To get full credits, your `***.pyt` code should implement an `ArcGIS Pro` tool b
 - accepts inputs including:
   - The working project path
   - The layer's name
-  - The output project path
+  - The output project path (Optional)
 - change the renderer of `Structures` feature layer from the `Campus.gdb` to `UniqueValueRenderer` on the column `Type`.
 - change the renderer of `Trees` feature layer from the `Campus.gdb` to `GraduatedColorsRenderer` on the column `Shape_Area`.
 
