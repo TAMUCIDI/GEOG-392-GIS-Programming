@@ -82,7 +82,7 @@ for layer in mapObj.listLayers():
         # Obtain the symbology object from layer
         symbology = layer.symbology
         # Make sure the "Structures" layer has a renderer
-        if hasattr(symbology, 'renderer') && layer.name=="Structures":
+        if hasattr(symbology, 'renderer') and layer.name=="Structures":
             ......
 ```
 
@@ -107,7 +107,7 @@ for layer in mapObj.listLayers():
         # Obtain the symbology object from layer
         symbology = layer.symbology
         # Make sure the "Structures" layer has a renderer
-        if hasattr(symbology, 'renderer') && layer.name=="Structures":
+        if hasattr(symbology, 'renderer') and layer.name=="Structures":
             # Change the renderer to 'UniqueValueRenderer'
             symbology.updateRenderer('***')
             # Use the 'Type' column as the unique value column
@@ -147,7 +147,7 @@ for layer in mapObj.listLayers():
         # Obtain the symbology object from layer
         symbology = layer.symbology
         # Make sure the "Structures" layer has a renderer
-        if hasattr(symbology, 'renderer') && layer.name=="Trees":
+        if hasattr(symbology, 'renderer') and layer.name=="Trees":
             # Change the renderer to 'UniqueValueRenderer'
             symbology.updateRenderer('***')
             # Tell arcpy which field we want to base our choropleth off of
