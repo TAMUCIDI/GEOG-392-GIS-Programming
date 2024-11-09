@@ -1,0 +1,5 @@
+Labs/Lab07/Data/DEM/n30_w097_1arc_v3.tif filter=lfs diff=lfs merge=lfs -text
+Labs/Lab07/Data/LandSAT/LT05_L2SP_026039_20110803_20200820_02_T1_SR_B1.TIF filter=lfs diff=lfs merge=lfs -text
+Labs/Lab07/Data/LandSAT/LT05_L2SP_026039_20110803_20200820_02_T1_SR_B2.TIF filter=lfs diff=lfs merge=lfs -text
+Labs/Lab07/Data/LandSAT/LT05_L2SP_026039_20110803_20200820_02_T1_SR_B3.TIF filter=lfs diff=lfs merge=lfs -text
+Labs/Lab07/Data/LandSAT/LT05_L2SP_026039_20110803_20200820_02_T1_SR_B4.TIF filter=lfs diff=lfs merge=lfs -text
