@@ -4,3 +4,5 @@ Labs/*/*_answer.pyt
 Labs/*/*.gdb
 tmp/*
 *.xml
+
+Labs/Lab07/Lab7_template.py
