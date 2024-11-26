@@ -174,7 +174,7 @@ A `progressor` is an important element we can add to a tool to improve the overa
 Inside of the `execute()` method, go ahead and define the following variables:
 
 ```python
-    readTime = 1.5
+    readTime = 3
     start = 0
     maximum = 100
     step = 25
@@ -201,69 +201,111 @@ The method SetProgressorPosition changes the "percentage" completed of the progr
 
 ## Task-2. Add a `Progressor` to your tool
 
-Apply the `Step` progressor to the tool you build. Here is an example of the `execute()` method in a tool of Lab5 with `step progressor` added.
+Apply the `Step` progressor to the tool you build. 
+Here is an example of the `execute()` and the `getParameterInfo` method in a tool `step progressor` added.
 
 ```python
-def execute(self, parameters, messages):
-    # Define our progressor variables
-    readTime = 2.5
-    start = 0
-    maximum = 100
-    step = 25
+# -*- coding: utf-8 -*-
 
-    # Setup the progressor
-    arcpy.SetProgressor("step", "Init tool...", start, maximum, step)
-    time.sleep(readTime)
+import arcpy
+import time
+
+def getParameterInfo(self):
+    """Define parameter definitions"""
+    param_proj_path = arcpy.Parameter(
+        ***
+    )
+    param_layer_name = arcpy.Parameter(
+        ***
+    )
+    # other optional parameters
+
+    params = [
+        param_proj_path, 
+        param_layer_name, 
+        '''
+        If you have other optional parameters, put them here.
+        '''
+        ]
+    return params
+
+# Other functions...
+
+def execute(self, parameters, messages):
+    """The source code of the tool."""
+    
+    # setup the progressor
+    # 3s should be enough for you to take screenshots for submission
+    readTime = 3
+    start = 0
+    max = 100
+    step = 25
+    # >>>>>>>>>>
+    arcpy.SetProgressor(***)
+    # <<<<<<<<<<
     # Add message to the results pane
     arcpy.AddMessage("Init tool...")
 
-    campus = r"***/***/Campus.gdb"
+    # Accept user input from toolbox interface
+    aprxFilePath = parameters[0]
+    layerName = ***
+    # other params are oprional
+    outputPath = ***
 
-    buildingName_input = parameters[0].valueAsText
-    bufferRad_input = parameters[1].valueAsText
+    # fetch the project
+    project = arcpy.mp.ArcGISProject(aprxFilePath)
+    """
+        Fetch the list of layers
+        the data structure is:
+        project 
+        >   map list(name is 'Map')
+            >    map (id is 0)
+                    >    layer list
+    """
+    layers = project.listMaps('Map')[0].listLayers()
+    
+    for layer in layers:
+        if layer.isFeatureLayer:
+            symbology = layer.symbology
+            # Advance the progressor here
+            arcpy.SetProgressorPosition(***)
+            arcpy.SetProgressorLabel(***)
+            arcpy.AddMessage("Finding the layers...")
+            time.sleep(readTime)
+            # End of advancing progessor
+                if hasattr(symbology, 'renderer') and layer.name == 'Structures':
+                    # re-render the 'structures' layer into 'UniqueValueRenderer'
+                    # >>>>>>>>>>
 
-     # Generate our where_clause
-    where_clause = "Bldg = '%s'" % buildingNumber_input
+                    # <<<<<<<<<<
+                    # Advance the progressor here
+                    arcpy.SetProgressorPosition(***)
+                    arcpy.SetProgressorLabel(***)
+                    arcpy.AddMessage("Re-rendering...")
+                    time.sleep(readTime)
+                elif hasattr(symbology, 'renderer') and layer.name == 'trees':
+                    # re-render the 'trees' layer into 'GraduateColorsRenderer'
+                    # >>>>>>>>>>
 
-    # Check if building exists
-    structures = campus + "/Structures"
-    cursor = arcpy.da.SearchCursor(structures, where_clause=where_clause)
-    shouldProceed = False
-
-    # Increment the progressor and change the label; add message to the results pane
-    arcpy.SetProgressorPosition(start + step)
-    arcpy.SetProgressorLabel("Validating building number once more...")
+                    # <<<<<<<<<<
+                    # Advance the progressor here
+                    arcpy.SetProgressorPosition(***)
+                    arcpy.SetProgressorLabel(***)
+                    arcpy.AddMessage("Re-rendering...")
+                    time.sleep(readTime)
+                else:
+                        # Error message
+    
+    # Save the updated project into a new copy.
+    project.saveACopy(***)
+    # Advance the progressor here
+    arcpy.SetProgressorPosition(***)
+    arcpy.SetProgressorLabel(***)
+    arcpy.AddMessage("Saving the project...")
     time.sleep(readTime)
-    arcpy.AddMessage("Validating building number once more...")
 
-    for row in cursor:
-        if row.getValue("BldgName") == buildingNumber_input:
-            shouldProceed = True
+    return
 
-        if shouldProceed:
-            buildingFeature = arcpy.analysis.Select(***)
-            arcpy.analysis.Buffer(***)
-
-            # Increment the progressor, change label, output message to results pane too
-            arcpy.SetProgressorPosition(start + step)
-            arcpy.SetProgressorLabel("Buffering....")
-            time.sleep(readTime)
-            arcpy.AddMessage("Buffering...")
-
-            arcpy.analysis.Clip(***)
-
-            # Increment the progressor, change label, output message to results pane too
-            arcpy.SetProgressorPosition(start + step)
-            arcpy.SetProgressorLabel("Clipping....")
-            time.sleep(readTime)
-            arcpy.AddMessage("Clipping...")
-
-            arcpy.arcpy.management.CopyFeatures(***)
-            # Increment the progressor, change label, output message to results pane too
-            arcpy.SetProgressorPosition(maximum)
-            arcpy.SetProgressorLabel("Wrapping Up....")
-            time.sleep(readTime)
-            arcpy.AddMessage("Wrapping Up...")
 ```
 
 ## Submission
